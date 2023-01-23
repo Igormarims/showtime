@@ -27,4 +27,15 @@ export class MovieApiService {
 
   }
 
+  getMovieDetails(data: any): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/movie/${data}?api_key=${this.apikey}`)
+  }
+
+  getMovieVideo(data: any): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/movie/${data}/videos?api_key=${this.apikey}`)
+  }
+
+  getMovieCast(data: any): Observable<any> {
+    return this.httpClient.get(`${this.baseUrl}/movie/${data}/credits?api_key=${this.apikey}`)
+  }
 }
