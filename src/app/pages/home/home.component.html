@@ -1,9 +1,11 @@
  <!--BANNER INÍCIO-->
  <div class="contain-fluid">
-    <div id="carouselExampleCaptions" class="carousel slide">
+    <div id="carouselExampleCaptions" class="carousel slide"
+     data-bs-ride="carousel">
        
         <div class="carousel-inner">
           <div class="carousel-item active"
+             data-bs-interval="10000"
              *ngFor="let b of bannerResult let i=index"
              [ngClass]="{active:i===1}"
              >
@@ -34,7 +36,9 @@
                 <img 
                    src="https:/image.tmdb.org/t/p/original/{{t.poster_path}}"
                     class="rowimg largeposter " 
-                    alt="...">
+                    [routerLink]="['/movie',t.id]"
+                    [alt]="t.name"
+                  />
              </ng-container>
         </div>
     </div>
