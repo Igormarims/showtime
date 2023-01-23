@@ -1,7 +1,12 @@
 
-#img {
+img {
     width: 100%;
     height: auto;
+    transition: all ease .3s;
+}
+
+#img:hover {
+  transform: scale(1.1);
 }
 
 .title {
@@ -16,10 +21,12 @@ a {
     background-color: #E50914;
     color: #fff;
     text-decoration: none;
+    transition: transform ease .3s;
 }
 
 a:hover {
     background-color: #E50914;
     color: #fff;
     border:2px solid #fff;
+    transform: scale(1.2);
 }
