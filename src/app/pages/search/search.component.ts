@@ -18,10 +18,8 @@ export class SearchComponent implements OnInit {
   }
 
   submitForm() {
-    console.log(this.searchForm.value, 'dados');
     this.movieApiService.getSearchMovie(this.searchForm.value).subscribe(
       (result)=> {
-        console.log(result, 'Search api');
         this.searchResult = result.results;
       }
     )

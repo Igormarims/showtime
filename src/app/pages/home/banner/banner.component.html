@@ -1,0 +1,13 @@
+<div class="row">
+    <h5 class="text-white">{{titulo }} Movies</h5>
+    <div class="rowposter mt-3 p-2" >
+        <ng-container *ngFor="let imagem  of listarImagem ">
+            <img 
+               src="https:/image.tmdb.org/t/p/original/{{ imagem.poster_path }}"
+                class="rowimg largeposter " 
+                [routerLink]="['/movie',imagem.id]"
+                [alt]="imagem.name"
+              />
+         </ng-container>
+    </div>
+</div>

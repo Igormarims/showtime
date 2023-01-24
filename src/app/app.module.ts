@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { SearchComponent } from './pages/search/search.component';
 import { MovieDetailsComponent } from './pages/movie-details/movie-details.component';
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
+import { BannerComponent } from './pages/home/banner/banner.component'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,

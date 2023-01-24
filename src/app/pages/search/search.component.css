@@ -13,6 +13,9 @@ button:hover {
 img {
     width: 100%;
 }
+img:hover{
+    cursor: pointer;
+}
 
 h5 {
     color: #FFF;

@@ -20,7 +20,6 @@ export class MovieDetailsComponent implements OnInit {
     // let getParamId = this.activatedRouter.snapshot.paramMap.get('id')
       this.activatedRouter.params.subscribe((getParam)=>{
         const getParamId = getParam['id']
-        console.log(getParamId, 'getParamId');
         this.getMovie(getParamId)
         this.getVideo(getParamId);
         this.getMovieCast(getParamId);
@@ -31,7 +30,6 @@ export class MovieDetailsComponent implements OnInit {
 
    getMovie(id:any) {
     this.movieApiService.getMovieDetails(id).subscribe((result)=>{
-      console.log(result, 'getMovie');
       this.getMovieDetailResult = result;
       
     })
@@ -39,7 +37,6 @@ export class MovieDetailsComponent implements OnInit {
 
    getVideo(id: any) {
     this.movieApiService.getMovieVideo(id).subscribe((result)=> {
-      console.log(result, 'getVideo@');
        result.results.forEach((element: any) => {
          if(element.type === 'Trailer'){
            this.getMovieVideoResult = element.key;
@@ -52,7 +49,6 @@ export class MovieDetailsComponent implements OnInit {
    getMovieCast(id: any) {
       this.movieApiService.getMovieCast(id)
       .subscribe((result)=>{ 
-        console.log(result, 'getMovieVideoCast');
           this.getMovieCastResult = result.cast;
       })
    }
